@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  ROBOT_NAME:
+    image: mcl:latest
+    environment:
+      - DISPLAY
+    volumes:
+      - $PWD:$PWD
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - mcl-vscode-extensions:$HOME/.vscode-server/extensions
+      - mcl-vscode-extensions-insiders:$HOME/.vscode-server-insiders/extensions
+    working_dir: $PWD
+    tty: true
+    ports:
+      - "54321:54321/udp" # mb
+      - "8080:8080" # web server
+      - "8000:8000" # websocket
+      - "35729:35729" # live reload
+
+volumes:
+  mcl-vscode-extensions:
+  mcl-vscode-extensions-insiders:
