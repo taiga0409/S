@@ -1,0 +1,3 @@
+[submodule "mcl"]
+	path = mcl
+	url = git@github.com:maquinista-ctrl/mcl.git

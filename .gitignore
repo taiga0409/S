@@ -1,0 +1,17 @@
+/build/
+!example/lib
+/doc/build
+/doc/output
+!/doc/output/README.md
+/doc/doxygen-bootstrapped
+*.swp
+/log/*
+*.txt
+*.asv
+*.autosave
+!*CMakeLists.txt
+!path/tr_size.txt
+.vscode/*
+!.vscode/c_cpp_properties.json
+!.vscode/launch.json
+!.vscode/tasks.json
